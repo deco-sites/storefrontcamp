@@ -13,7 +13,8 @@ export interface Props {
 
 export default function ProductAd(props: Props) {
   return (
-    <div class="flex flex-col sm:flex-row items-center sm:items-stretch justify-center w-full px-4 sm:px-10 max-w-[1024px] m-auto gap-4 max-h-96 h-full">
+    <div class="relative flex flex-col sm:flex-row items-center sm:items-stretch justify-center w-full px-4 sm:px-10 max-w-[1024px] m-auto gap-4 max-h-96 h-full">
+      <Button class="absolute top-4 right-4">Save</Button>
       <image
         src={props.product.imageSrc}
         class="max-w-96"
