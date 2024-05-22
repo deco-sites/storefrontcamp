@@ -1,1 +1,1 @@
-{"name":"Home","sections":[{"__resolveType":"Header - 01"}],"__resolveType":"website/pages/Page.tsx","path":"/"}
+{"name":"Home","sections":[{"__resolveType":"Header - 01"},{"__resolveType":"site/sections/Product/ProductAd.tsx","productPage":{"__resolveType":"PDP Loader"},"loading":false}],"__resolveType":"website/pages/Page.tsx","path":"/"}

@@ -2,15 +2,19 @@ import { formatPrice } from "../../sdk/format.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import Button from "../ui/Button.tsx";
 import { ProductDetailsPage } from "apps/commerce/types.ts";
+import Spinner from "../ui/Spinner.tsx";
 
 export interface Props {
   productPage: ProductDetailsPage | null;
   adDescription?: string;
+
+  /** @hide */
+  loading?: boolean;
 }
 
 export default function ProductAd(props: Props) {
   const { productPage } = props;
-  if (!productPage) {
+  if (!productPage?.product) {
     return null;
   }
 
@@ -29,10 +33,12 @@ export default function ProductAd(props: Props) {
         alt={image.alternateName}
       />
       <div class="w-full flex flex-col justify-between">
-        <div class="flex flex-col items-center sm:items-start">
+        <div class="flex flex-col items-center sm:items-start min-h-32">
           <h2 class="bold text-xl">{productPage.product.name}</h2>
           <p class="mt-4">
-            {props.adDescription ?? productPage.product.description}
+            {props.loading
+              ? <Spinner />
+              : props.adDescription ?? productPage.product.description}
           </p>
         </div>
         <div class="flex flex-col items-center sm:items-end">
