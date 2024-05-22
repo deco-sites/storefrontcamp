@@ -20,11 +20,13 @@ export default function ProductAd(props: Props) {
 
   return (
     <div class="relative flex flex-col sm:flex-row items-center sm:items-stretch justify-center w-full px-4 sm:px-10 max-w-[1024px] m-auto gap-4 max-h-96 h-full py-4">
-      <Button class="absolute top-4 right-4">Save</Button>
+      {productPage.product.productID !== "-1" && (
+        <Button class="absolute top-4 right-4">Save</Button>
+      )}
       <image
         src={image.url}
         class="max-w-96"
-        alt={image.description}
+        alt={image.alternateName}
       />
       <div class="w-full flex flex-col justify-between">
         <div class="flex flex-col items-center sm:items-start">
@@ -38,8 +40,10 @@ export default function ProductAd(props: Props) {
             {formatPrice(offer.price, offer.priceCurrency)}
           </span>
           <div class="flex flex-col sm:flex-row justify-center items-center gap-2">
-            <a class="btn" href={productPage.product.url}>Mais Detalhes</a>
-            <Button>Comprar</Button>
+            {productPage.product.url && (
+              <a class="btn" href={productPage.product.url}>Mais Detalhes</a>
+            )}
+            {productPage.product.productID !== "-1" && <Button>Comprar</Button>}
           </div>
         </div>
       </div>
