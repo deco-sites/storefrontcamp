@@ -350,5 +350,9 @@
     "path": "/stats",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/Preview%20site%2Floaders%2Fevents%2FproductComments.ts.json": {
+    "blockType": "loaders",
+    "__resolveType": "site/loaders/events/productComments.ts"
   }
 }

@@ -8,7 +8,7 @@ export interface CampEvent {
 export type Comment = string;
 
 export interface Props {
-  productId: string | number;
+  productId: string;
 }
 
 export default async function loader(
@@ -23,7 +23,7 @@ export default async function loader(
         "x-api-key": "storefrontcamp",
       },
     },
-  ).then((res) => res.json()).catch((e) => console.log("errrrrrr", e));
+  ).then((res) => res.json());
 
   return res.comments;
 }
