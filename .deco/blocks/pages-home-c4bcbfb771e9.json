@@ -15,7 +15,8 @@
           "productPage": {
             "__resolveType": "PDP Loader"
           },
-          "animateImage": true
+          "animateImage": true,
+          "vertical": true
         },
         {
           "__resolveType": "site/sections/Product/ProductAd.tsx",
