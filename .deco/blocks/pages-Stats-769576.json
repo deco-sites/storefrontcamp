@@ -1,0 +1,13 @@
+{
+  "name": "Stats",
+  "path": "/stats",
+  "sections": [
+    {
+      "__resolveType": "site/sections/Events/TotalEvents.tsx"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
