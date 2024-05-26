@@ -1,7 +1,6 @@
 import { useId } from "preact/hooks";
 import { invoke } from "../../runtime.ts";
 import { useSignal } from "@preact/signals";
-import { JSX } from "preact";
 import { debounce } from "std/async/debounce.ts";
 
 export default function ShowProductEvents() {
@@ -9,9 +8,9 @@ export default function ShowProductEvents() {
   const id = useId();
 
   const handleChange = debounce(
-    async (e: JSX.TargetedEvent<HTMLInputElement>) => {
+    async (e: Event) => {
       const comments = await invoke.site.loaders.events.productComments({
-        productId: e.currentTarget.value,
+        productId: (e.target as HTMLInputElement)?.value,
       });
 
       votes.value = comments?.length ?? 0;
