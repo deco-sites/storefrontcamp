@@ -4,6 +4,7 @@ import Button from "../ui/Button.tsx";
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import Spinner from "../ui/Spinner.tsx";
 import Image from "apps/website/components/Image.tsx";
+import SaveButton from "../../islands/SaveProductAd.tsx";
 
 export interface Props {
   productPage: ProductDetailsPage | null;
@@ -31,9 +32,7 @@ export default function ProductAd(props: Props) {
         !props.vertical && "sm:flex-row sm:items-stretch"
       } justify-center w-full px-4 sm:px-10 max-w-[1024px] m-auto gap-4 py-4`}
     >
-      {productPage.product.productID !== "-1" && (
-        <Button class="absolute top-4 right-4">Save</Button>
-      )}
+      <SaveButton image={image.url!} title={productPage.product.name!} />
       {props.loading
         ? <div class="skeleton w-80 sm:w-96 aspect-square" />
         : (
