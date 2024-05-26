@@ -1,3 +1,4 @@
+import { JSX } from "preact";
 import { formatPrice } from "../../sdk/format.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import Button from "../ui/Button.tsx";
