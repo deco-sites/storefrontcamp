@@ -1,6 +1,6 @@
 import { JSX } from "preact";
 
-export { default } from "../../components/product/ProductAd.tsx";
+export { default, loader } from "../../components/product/ProductAd.tsx";
 import { default as Component } from "../../components/product/ProductAd.tsx";
 
 export type ProductAd = JSX.Element;

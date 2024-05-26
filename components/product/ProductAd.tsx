@@ -5,18 +5,36 @@ import { ProductDetailsPage } from "apps/commerce/types.ts";
 import Spinner from "../ui/Spinner.tsx";
 import Image from "apps/website/components/Image.tsx";
 import SaveButton from "../../islands/SaveProductAd.tsx";
+import type { SectionProps } from "deco/mod.ts";
+import { AppContext } from "../../apps/site.ts";
 
 export interface Props {
   productPage: ProductDetailsPage | null;
   adDescription?: string;
   animateImage?: boolean;
   vertical?: boolean;
+  highlight?: boolean;
 
   /** @hide */
   loading?: boolean;
 }
 
-export default function ProductAd(props: Props) {
+export const loader = async (props: Props, _req: Request, ctx: AppContext) => {
+  const productId = props.productPage?.product?.productID ?? "-1";
+  console.log({ productId });
+
+  if (props.highlight && productId !== "-1") {
+    const comments = await ctx.invoke.site.loaders.events.productComments({
+      productId,
+    });
+
+    props.highlight = comments?.length > 3;
+  }
+
+  return props;
+};
+
+export default function ProductAd(props: SectionProps<typeof loader>) {
   const { productPage } = props;
   if (!productPage?.product) {
     return null;
@@ -36,7 +54,12 @@ export default function ProductAd(props: Props) {
       {props.loading
         ? <div class="skeleton w-80 sm:w-96 aspect-square" />
         : (
-          <div class="max-w-96 overflow-hidden">
+          <div class="relative max-w-96 overflow-hidden">
+            {props.highlight && (
+              <span class="absolute bg-primary top-8 right-0 z-10 py-2 px-3">
+                Destaque
+              </span>
+            )}
             <Image
               src={image.url ?? ""}
               width={384}
