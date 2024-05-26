@@ -9,6 +9,7 @@ import Image from "apps/website/components/Image.tsx";
 export interface Props {
   productPage: ProductDetailsPage | null;
   adDescription?: string;
+  animateImage?: boolean;
 
   /** @hide */
   loading?: boolean;
@@ -32,13 +33,19 @@ export default function ProductAd(props: Props) {
       {props.loading
         ? <div class="skeleton w-80 sm:w-96 aspect-square" />
         : (
-          <Image
-            src={image.url ?? ""}
-            width={384}
-            height={384}
-            class="max-w-96"
-            alt={image.alternateName}
-          />
+          <div class="max-w-96 overflow-hidden">
+            <Image
+              src={image.url ?? ""}
+              width={384}
+              height={384}
+              class={`w-full ${
+                props.animateImage
+                  ? "hover:scale-125 transition-all ease-in-out"
+                  : ""
+              }`}
+              alt={image.alternateName}
+            />
+          </div>
         )}
       <div class="w-full flex flex-col justify-between">
         <div class="flex flex-col items-center sm:items-start min-h-32">
