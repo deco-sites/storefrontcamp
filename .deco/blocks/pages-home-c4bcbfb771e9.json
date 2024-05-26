@@ -1,1 +1,30 @@
-{"name":"Home","sections":[{"__resolveType":"Header - 01"},{"__resolveType":"site/sections/Product/PartialProductAd.tsx","message":"I love this product!","buttonTitle":"See other","image":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/9867/86d24511-8483-4ad0-84ab-698cfe93d87a","productAds":[{"__resolveType":"site/sections/Product/ProductAd.tsx","productPage":{"__resolveType":"PDP Loader"}}]}],"__resolveType":"website/pages/Page.tsx","path":"/"}
+{
+  "name": "Home",
+  "sections": [
+    {
+      "__resolveType": "Header - 01"
+    },
+    {
+      "__resolveType": "site/sections/Product/PartialProductAd.tsx",
+      "message": "I love this product!",
+      "buttonTitle": "See other",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/9867/86d24511-8483-4ad0-84ab-698cfe93d87a",
+      "productAds": [
+        {
+          "__resolveType": "site/sections/Product/ProductAd.tsx",
+          "productPage": {
+            "__resolveType": "PDP Loader"
+          }
+        },
+        {
+          "__resolveType": "site/sections/Product/ProductAd.tsx",
+          "productPage": {
+            "__resolveType": "PDP Loader"
+          }
+        }
+      ]
+    }
+  ],
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/"
+}

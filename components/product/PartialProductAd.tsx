@@ -33,7 +33,7 @@ export default function PartialProductAd(props: Props) {
         </div>
         <Button
           class="h-14 w-full max-w-40 mx-auto"
-          {...usePartialSection({
+          {...usePartialSection<typeof PartialProductAd>({
             props: { idx: (idx + 1) % productAds.length },
           })}
         >
