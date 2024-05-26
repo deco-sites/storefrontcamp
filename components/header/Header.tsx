@@ -19,6 +19,7 @@ export interface Buttons {
   hideSearchButton?: boolean;
   hideAccountButton?: boolean;
   hideWishlistButton?: boolean;
+  hideSavedAdsButton?: boolean;
   hideCartButton?: boolean;
 }
 

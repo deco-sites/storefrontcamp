@@ -130,6 +130,21 @@ function Navbar(
             WISHLIST
           </a>
         )}
+        {!buttons?.hideSavedAdsButton && (
+          <a
+            class="flex items-center text-xs font-thin"
+            href="#"
+            aria-label="Saved"
+          >
+            <button
+              class="flex btn btn-circle btn-sm btn-ghost gap-1"
+              aria-label="Saved"
+            >
+              <Icon id="Friends" size={24} strokeWidth={2} />
+            </button>
+            SAVED
+          </a>
+        )}
         {!buttons?.hideCartButton && (
           <div class="flex items-center text-xs font-thin">
             {platform === "vtex" && <CartButtonVTEX />}
