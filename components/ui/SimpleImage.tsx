@@ -4,7 +4,6 @@ import { clx } from "../../sdk/clx.ts";
 
 export interface Props {
   altText?: string;
-  position?: "Left" | "Right";
   width?: "30%" | "50%" | "70%";
   mobile?: ImageWidget;
   desktop?: ImageWidget;
@@ -12,7 +11,6 @@ export interface Props {
 
 export default function SimpleImage({
   altText = "Image",
-  position = "Left",
   width,
   mobile =
     "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2753/b2278d2d-2270-482b-98d4-f09d5f05ba97",

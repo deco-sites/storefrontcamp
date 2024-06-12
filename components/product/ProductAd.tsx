@@ -1,3 +1,4 @@
+import { JSX } from "preact";
 import { formatPrice } from "../../sdk/format.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import Button from "../ui/Button.tsx";
@@ -19,6 +20,8 @@ export interface Props {
   loading?: boolean;
 }
 
+export type ProductAd = JSX.Element;
+
 export const loader = async (props: Props, _req: Request, ctx: AppContext) => {
   const productId = props.productPage?.product?.productID ?? "-1";
   console.log({ productId });
@@ -34,7 +37,9 @@ export const loader = async (props: Props, _req: Request, ctx: AppContext) => {
   return props;
 };
 
-export default function ProductAd(props: SectionProps<typeof loader>) {
+export default function Section(
+  props: SectionProps<typeof loader>,
+): ProductAd | null {
   const { productPage } = props;
   if (!productPage?.product) {
     return null;

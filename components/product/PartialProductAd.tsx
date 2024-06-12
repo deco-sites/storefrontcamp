@@ -2,12 +2,13 @@ import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 import Button from "../ui/Button.tsx";
 import { Section } from "deco/blocks/section.ts";
 import type { ImageWidget } from "apps/admin/widgets.ts";
+import { ProductAd } from "./ProductAd.tsx";
 
 export interface Props {
   message: string;
   image: ImageWidget;
   buttonTitle: string;
-  productAds: Section[];
+  productAds: Section<ProductAd>[];
 
   /**
    * @title Index
