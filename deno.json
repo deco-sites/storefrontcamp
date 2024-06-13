@@ -1,7 +1,7 @@
 {
   "imports": {
-    "deco/": "https://cdn.jsdelivr.net/gh/deco-cx/deco@1.68.1/",
-    "apps/": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.43.4/",
+    "deco/": "https://cdn.jsdelivr.net/gh/deco-cx/deco@1.73.0/",
+    "apps/": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.46.0/",
     "$fresh/": "https://deno.land/x/fresh@1.6.8/",
     "preact": "https://esm.sh/preact@10.19.6",
     "preact/": "https://esm.sh/preact@10.19.6/",
@@ -29,7 +29,9 @@
     "generate-icons": "deno run -A --unstable static/generate-icons.ts",
     "dev": "deno run -A --env --unstable --unstable-hmr dev.ts"
   },
-  "githooks": { "pre-commit": "check" },
+  "githooks": {
+    "pre-commit": "check"
+  },
   "exclude": [
     "node_modules",
     "static/",
@@ -38,7 +40,14 @@
     "**/_fresh/*",
     ".deco"
   ],
-  "lint": { "rules": { "tags": ["fresh", "recommended"] } },
+  "lint": {
+    "rules": {
+      "tags": [
+        "fresh",
+        "recommended"
+      ]
+    }
+  },
   "nodeModulesDir": false,
   "compilerOptions": {
     "jsx": "react-jsx",

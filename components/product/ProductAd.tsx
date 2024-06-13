@@ -39,10 +39,10 @@ export const loader = async (props: Props, _req: Request, ctx: AppContext) => {
 
 export default function Section(
   props: SectionProps<typeof loader>,
-): ProductAd | null {
+): ProductAd {
   const { productPage } = props;
   if (!productPage?.product) {
-    return null;
+    return <></>;
   }
 
   const [image] = productPage.product.image ?? [];
