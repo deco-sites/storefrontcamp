@@ -10,6 +10,7 @@ import * as $$$3 from "./loaders/events/productComments.ts";
 import * as $$$4 from "./loaders/icons.ts";
 import * as $$$0 from "./loaders/Layouts/ProductCard.tsx";
 import * as $$$1 from "./loaders/List/Sections.tsx";
+import * as $$$$$$$0 from "./matchers/utm.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Cards/IconCardsCarousel.tsx";
 import * as $$$$$$2 from "./sections/Cards/IconCardsCarouselWithImage.tsx";
@@ -130,6 +131,9 @@ const manifest = {
     "site/sections/Social/InstagramPosts.tsx": $$$$$$52,
     "site/sections/Social/WhatsApp.tsx": $$$$$$53,
     "site/sections/Theme/Theme.tsx": $$$$$$54,
+  },
+  "matchers": {
+    "site/matchers/utm.ts": $$$$$$$0,
   },
   "actions": {
     "site/actions/events/comment.ts": $$$$$$$$$0,

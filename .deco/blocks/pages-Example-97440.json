@@ -1,0 +1,40 @@
+{
+  "name": "Example",
+  "path": "/example",
+  "sections": {
+    "__resolveType": "website/flags/multivariate.ts",
+    "variants": [
+      {
+        "value": [
+          {
+            "__resolveType": "site/sections/Content/CallToAction.tsx",
+            "cta": [],
+            "text": "CAIU NO UTM"
+          }
+        ],
+        "rule": {
+          "__resolveType": "site/matchers/utm.ts",
+          "campaigns": [
+            "instagram*"
+          ]
+        }
+      },
+      {
+        "value": [
+          {
+            "__resolveType": "site/sections/Content/Hero.tsx",
+            "description": "Default",
+            "placement": "right"
+          }
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/always.ts"
+        }
+      }
+    ]
+  },
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

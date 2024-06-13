@@ -354,5 +354,11 @@
   "/.deco/blocks/Preview%20site%2Floaders%2Fevents%2FproductComments.ts.json": {
     "blockType": "loaders",
     "__resolveType": "site/loaders/events/productComments.ts"
+  },
+  "/.deco/blocks/pages-Example-97440.json": {
+    "name": "Example",
+    "path": "/example",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
