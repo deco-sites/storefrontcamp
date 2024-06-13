@@ -4,16 +4,16 @@ import { useSignal } from "@preact/signals";
 import { debounce } from "std/async/debounce.ts";
 
 export default function ShowProductEvents() {
-  const votes = useSignal(0);
+  const comments = useSignal<string[]>([]);
   const id = useId();
 
   const handleChange = debounce(
     async (e: Event) => {
-      const comments = await invoke.site.loaders.events.productComments({
+      const r = await invoke.site.loaders.events.productComments({
         productId: (e.target as HTMLInputElement)?.value,
       });
 
-      votes.value = comments?.length ?? 0;
+      comments.value = r.filter((c) => c.length >= 5);
     },
     300,
   );
@@ -27,7 +27,12 @@ export default function ShowProductEvents() {
         onInput={handleChange}
         class="input input-bordered"
       />
-      <div class="mt-4">Total: {votes} votes</div>
+      {comments.value.length > 0 && (
+        <div class="mt-4">
+          {comments.value.map((c) => <div class="border p-2">- {c}</div>)}
+        </div>
+      )}
+      <div class="mt-4">Total: {comments.value.length} votes</div>
     </div>
   );
 }
