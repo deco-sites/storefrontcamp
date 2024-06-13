@@ -55,7 +55,11 @@ export default function Section(
         !props.vertical && "sm:flex-row sm:items-stretch"
       } justify-center w-full px-4 sm:px-10 max-w-[1024px] m-auto gap-4 py-4`}
     >
-      <SaveButton image={image.url!} title={productPage.product.name!} />
+      <SaveButton
+        image={image.url!}
+        title={productPage.product.name!}
+        productId={productPage.product.productID}
+      />
       {props.loading
         ? <div class="skeleton w-80 sm:w-96 aspect-square" />
         : (
