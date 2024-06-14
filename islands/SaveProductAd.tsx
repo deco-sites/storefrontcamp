@@ -4,6 +4,7 @@ import Button from "../components/ui/Button.tsx";
 import Modal from "../components/ui/Modal.tsx";
 import TextArea from "../components/daisy/TextArea.tsx";
 import { invoke } from "../runtime.ts";
+import Toastify from "toastify-js";
 
 export interface Props {
   image: ImageWidget;
@@ -24,6 +25,14 @@ export default function SaveProductAd(props: Props) {
       productId: props.productId,
       comment: textarea.value,
     });
+
+    Toastify({
+      text: "Obrigado!",
+      duration: 3000,
+      close: true,
+      gravity: "bottom",
+      position: "right",
+    }).showToast();
 
     open.value = false;
   };
