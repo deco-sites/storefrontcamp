@@ -18,7 +18,7 @@ export function LoadingFallback() {
           name: "Loading...",
           image: [{
             "@type": "ImageObject",
-            url: "",
+            url: "https://placehold.co/384",
             alternateName: "",
           }],
         },
