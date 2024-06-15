@@ -2,7 +2,7 @@
   "name": "Home",
   "sections": [
     {
-      "__resolveType": "Header - 01"
+      "__resolveType": "Header Cultura"
     },
     {
       "__resolveType": "site/sections/Product/PartialProductAd.tsx",
