@@ -7,6 +7,9 @@
     },
     {
       "__resolveType": "site/sections/Events/ShowProductEvents.tsx"
+    },
+    {
+      "__resolveType": "site/sections/HTMXForm.tsx"
     }
   ],
   "seo": {
