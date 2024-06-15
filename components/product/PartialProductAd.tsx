@@ -1,14 +1,13 @@
 import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 import Button from "../ui/Button.tsx";
-import { Section } from "deco/blocks/section.ts";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import { ProductAd } from "./ProductAd.tsx";
+import ProductAd, { Props as ProductAdProps } from "./ProductAd.tsx";
 
 export interface Props {
   message: string;
   image: ImageWidget;
   buttonTitle: string;
-  productAds: Section<ProductAd>[];
+  productAds: ProductAdProps[]; // Section<ProductAd> did not work at all :(
 
   /**
    * @title Index
@@ -25,7 +24,7 @@ export default function PartialProductAd(props: Props) {
   return (
     <div class="flex sm:flex-row flex-col justify-center group">
       <div class="w-full max-w-[800px]">
-        <productAd.Component {...productAd.props} />
+        <ProductAd {...productAd} />
       </div>
       <div class="flex flex-col justify-center">
         <div class="flex sm:flex-col w-full justify-center">

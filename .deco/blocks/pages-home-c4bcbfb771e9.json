@@ -11,19 +11,49 @@
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/9867/86d24511-8483-4ad0-84ab-698cfe93d87a",
       "productAds": [
         {
-          "__resolveType": "site/sections/Product/ProductAd.tsx",
           "productPage": {
-            "__resolveType": "PDP Loader"
-          },
-          "animateImage": true,
-          "vertical": true,
-          "highlight": true
+            "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+            "slug": "camisa-polo-masculina-azul-sea"
+          }
         },
         {
-          "__resolveType": "site/sections/Product/ProductAd.tsx",
           "productPage": {
-            "__resolveType": "PDP Loader"
+            "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+            "slug": "camisa-polo-masculina-passion"
           }
+        },
+        {
+          "productPage": {
+            "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+            "slug": "vestido-azul"
+          }
+        },
+        {
+          "productPage": {
+            "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+            "slug": "camisa-polo-masculina-sunset"
+          }
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Images/BannerGrid.tsx",
+      "title": "Destaque",
+      "itemsPerLine": {
+        "mobile": 2,
+        "desktop": 2
+      },
+      "banners": [
+        {
+          "srcMobile": "https://live.staticflickr.com/7377/11858015003_29b0173d44_b.jpg",
+          "srcDesktop": "https://live.staticflickr.com/7377/11858015003_29b0173d44_b.jpg",
+          "alt": "Gruta",
+          "href": "/culturas"
+        },
+        {
+          "srcMobile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIVFjGVC99wj3QS52HXHg44Yt1f5BEODOXcA&s",
+          "alt": "Itanhaem",
+          "href": "/culturas"
         }
       ]
     }
