@@ -56,6 +56,50 @@
           "href": "/culturas"
         }
       ]
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "Lançamentos",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "sort": "release:desc",
+          "collection": "137",
+          "count": 6
+        }
+      },
+      "layout": {
+        "numberOfSliders": {
+          "mobile": 2
+        }
+      }
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductAd.tsx",
+      "productPage": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+        "slug": "vestido-sunset"
+      }
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "sort": "orders:desc",
+          "fuzzy": "automatic",
+          "query": "camisa",
+          "count": 6
+        }
+      },
+      "title": "Mais vendidos"
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductAd.tsx",
+      "productPage": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+        "slug": "camiseta-masculina-gola-lisa-verde-clara"
+      }
     }
   ],
   "__resolveType": "website/pages/Page.tsx",
