@@ -1,1 +1,47 @@
-{"name":"Quem somos","path":"/quem-somos","sections":[{"__resolveType":"Header - 01"},{"__resolveType":"website/sections/Seo/SeoV2.tsx","title":"Conhec","type":"article"},{"__resolveType":"site/sections/Content/Hero.tsx","image":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/9867/938f7a60-d23a-42dd-bb21-fee3d007490b","title":"<p>Conexões Culturais</p>","description":"Conheça as maravilhas da baixada santista ","placement":"left","cta":[{"variant":"Normal","href":"https://www.google.com/maps/search/itanhaem","text":"Veja mais"}]},{"__resolveType":"site/sections/Content/RichText.tsx","containerWidth":1000,"text":"<p>Venha conhecer a maravilhosa região da baixada santista, cheia de pontos turísticos e culinária.</p>"},{"__resolveType":"site/sections/Coupon.tsx","code":"bemvindo10","description":"Aproveite o cupom de primeira compra!"},{"__resolveType":"Footer - 01"}],"seo":{"__resolveType":"website/sections/Seo/SeoV2.tsx"},"__resolveType":"website/pages/Page.tsx"}
+{
+  "name": "Quem somos",
+  "path": "/quem-somos",
+  "sections": [
+    {
+      "__resolveType": "Header - 01"
+    },
+    {
+      "__resolveType": "website/sections/Seo/SeoV2.tsx",
+      "title": "Quem somos",
+      "type": "article",
+      "description": "Venha conhecer",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/9867/780d02c2-7d39-45c4-b5bf-b5d082fc6136"
+    },
+    {
+      "__resolveType": "site/sections/Content/Hero.tsx",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/9867/938f7a60-d23a-42dd-bb21-fee3d007490b",
+      "title": "<p>Conexões Culturais</p>",
+      "description": "Conheça as maravilhas da baixada santista ",
+      "placement": "left",
+      "cta": [
+        {
+          "variant": "Normal",
+          "href": "https://www.google.com/maps/search/itanhaem",
+          "text": "Veja mais"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Content/RichText.tsx",
+      "containerWidth": 1000,
+      "text": "<p>Venha conhecer a maravilhosa região da baixada santista, cheia de pontos turísticos e culinária.</p>"
+    },
+    {
+      "__resolveType": "site/sections/Coupon.tsx",
+      "code": "bemvindo10",
+      "description": "Aproveite o cupom de primeira compra!"
+    },
+    {
+      "__resolveType": "Footer - 01"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

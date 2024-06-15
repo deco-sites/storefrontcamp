@@ -52,7 +52,7 @@ export default function HTMXForm(props: SectionProps<typeof loader>) {
       </form>
       <div class="border rounded">
         <h3>Current reminders</h3>
-        <ul>
+        <ul class="list-disc">
           {props.reminders?.map((reminder) => <li>{reminder}</li>)}
         </ul>
       </div>
