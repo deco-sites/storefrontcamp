@@ -360,5 +360,9 @@
     "path": "/example",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/Preview%20site%2Floaders%2FrelatedProduct.ts.json": {
+    "blockType": "loaders",
+    "__resolveType": "site/loaders/relatedProduct.ts"
   }
 }
