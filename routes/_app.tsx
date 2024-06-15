@@ -21,12 +21,6 @@ export default defineApp(async (_req, ctx) => {
         {/* Enable View Transitions API */}
         <meta name="view-transition" content="same-origin" />
 
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-        />
-
         {/* Tailwind v3 CSS file */}
         <link
           href={asset(`/styles.css?revision=${revision}`)}
@@ -35,6 +29,13 @@ export default defineApp(async (_req, ctx) => {
 
         {/* Web Manifest */}
         <link rel="manifest" href={asset("/site.webmanifest")} />
+
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+          defer
+        />
       </Head>
 
       {/* Rest of Preact tree */}
