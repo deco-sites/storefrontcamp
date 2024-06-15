@@ -364,5 +364,11 @@
   "/.deco/blocks/Preview%20site%2Floaders%2FrelatedProduct.ts.json": {
     "blockType": "loaders",
     "__resolveType": "site/loaders/relatedProduct.ts"
+  },
+  "/.deco/blocks/pages-Test-580120.json": {
+    "name": "Test",
+    "path": "/test",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
