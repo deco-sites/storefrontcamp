@@ -5,6 +5,7 @@ import Modal from "../components/ui/Modal.tsx";
 import TextArea from "../components/daisy/TextArea.tsx";
 import { invoke } from "../runtime.ts";
 import Toastify from "toastify-js";
+import { sendEvent } from "../sdk/analytics.tsx";
 
 export interface Props {
   image: ImageWidget;
@@ -33,6 +34,15 @@ export default function SaveProductAd(props: Props) {
       gravity: "bottom",
       position: "right",
     }).showToast();
+
+    sendEvent<any>({
+      name: "post_score",
+      params: {
+        score: 1,
+        level: 1,
+        character: "User",
+      },
+    });
 
     open.value = false;
   };
